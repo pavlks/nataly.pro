@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Наталия Пуринь | Психолог | Гештальт, телесная терапия, сексология</title>
+<meta name="description" content="Наталия Пуринь - психолог с 2005 года. Индивидуальная и парная терапия онлайн. Гештальт, телесно-ориентированный подход, системно-семейная терапия, сексология, пространство горя.">
+<meta name="keywords" content="психолог онлайн, гештальт терапия, телесно-ориентированная терапия, сексолог, системно-семейная терапия, пространство горя, доула смерти, терапия пар">
+<meta property="og:title" content="NP - Психолог | Профессиональная психологическая помощь онлайн">
+<meta property="og:description" content="Более 19 лет практики. Индивидуальная работа и работа с парами. Гештальт, телесная терапия, сексология, работа с горем.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --peach: #F2A07B;
+  --peach-light: #FAD9C8;
+  --peach-pale: #FDF0E8;
+  --peach-dark: #E07A4F;
+  --warm-white: #FEFAF6;
+  --text-dark: #2C1A0E;
+  --text-mid: #5C3D2A;
+  --text-soft: #9A6E58;
+  --sage: #8FAF8A;
+  --cream: #F7EDE2;
+  --gradient-main: linear-gradient(135deg, #F2A07B 0%, #E8704A 60%, #D4553A 100%);
+  --gradient-hero: linear-gradient(160deg, rgba(242,160,123,0.15) 0%, rgba(232,112,74,0.25) 100%);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Jost', sans-serif;
+  background: var(--warm-white);
+  color: var(--text-dark);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 18px 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(254,250,246,0.75);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(242,160,123,0.15);
+  transition: all 0.4s ease;
+}
+.nav-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--peach-dark);
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex; gap: 36px; list-style: none;
+}
+.nav-links a {
+  font-size: 13px; font-weight: 400;
+  color: var(--text-mid);
+  text-decoration: none;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+.nav-links a:hover { color: var(--peach-dark); }
+.nav-cta {
+  padding: 10px 28px;
+  background: var(--gradient-main);
+  color: white;
+  border: none; border-radius: 40px;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px; font-weight: 400;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  cursor: pointer; text-decoration: none;
+  transition: opacity 0.3s, transform 0.2s;
+  box-shadow: 0 4px 20px rgba(232,112,74,0.3);
+}
+.nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+/* ── HERO ── */
+#hero {
+  position: relative;
+  height: 100vh; min-height: 700px;
+  display: flex; align-items: center;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    160deg,
+    #f7ede2 0%,
+    #fad9c8 30%,
+    #f2c4a8 60%,
+    #e8a07a 100%
+  );
+}
+/* Placeholder for photographer's photo */
+.hero-photo {
+  position: absolute; right: 0; top: 0;
+  width: 55%; height: 100%;
+  object-fit: cover; object-position: center top;
+  background: linear-gradient(135deg, #e8a07a, #d4553a);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px; color: rgba(255,255,255,0.6); letter-spacing:1px;
+}
+.hero-photo-overlay {
+  position: absolute; right: 0; top: 0;
+  width: 55%; height: 100%;
+  background: linear-gradient(to right, var(--warm-white) 0%, rgba(254,250,246,0.4) 30%, transparent 60%);
+}
+.hero-content {
+  position: relative; z-index: 2;
+  padding: 0 60px;
+  max-width: 640px;
+}
+.hero-eyebrow {
+  font-size: 12px; font-weight: 400;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: var(--peach-dark);
+  margin-bottom: 20px;
+  opacity: 0; animation: fadeUp 0.8s 0.2s forwards;
+}
+.hero-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(52px, 6vw, 82px);
+  font-weight: 300; line-height: 1.1;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+  opacity: 0; animation: fadeUp 0.8s 0.4s forwards;
+}
+.hero-title em { font-style: italic; color: var(--peach-dark); }
+.hero-sub {
+  font-size: 16px; font-weight: 300; line-height: 1.7;
+  color: var(--text-mid);
+  margin-bottom: 44px;
+  max-width: 480px;
+  opacity: 0; animation: fadeUp 0.8s 0.6s forwards;
+}
+.hero-btns {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  opacity: 0; animation: fadeUp 0.8s 0.8s forwards;
+}
+.btn-primary {
+  padding: 16px 40px;
+  background: var(--gradient-main);
+  color: white; border: none; border-radius: 50px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px; font-weight: 400;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  cursor: pointer; text-decoration: none;
+  box-shadow: 0 8px 30px rgba(232,112,74,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-flex; align-items: center; gap: 10px;
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(232,112,74,0.45); }
+.btn-glass {
+  padding: 16px 40px;
+  background: rgba(255,255,255,0.18);
+  color: var(--text-dark);
+  border: 1px solid rgba(242,160,123,0.4);
+  border-radius: 50px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px; font-weight: 400;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  cursor: pointer; text-decoration: none;
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  transition: background 0.3s, border-color 0.3s;
+}
+.btn-glass:hover {
+  background: rgba(255,255,255,0.3);
+  border-color: rgba(242,160,123,0.7);
+}
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 60px;
+  display: flex; align-items: center; gap: 12px;
+  opacity: 0; animation: fadeUp 0.8s 1.2s forwards;
+}
+.scroll-line {
+  width: 50px; height: 1px;
+  background: var(--peach);
+  animation: expandLine 2s 1.5s ease forwards;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.scroll-text {
+  font-size: 11px; letter-spacing: 2.5px;
+  text-transform: uppercase; color: var(--peach-dark);
+}
+
+/* ── DIVIDERS ── */
+.divider-botanical {
+  width: 100%; overflow: hidden;
+  line-height: 0; position: relative;
+  padding: 20px 0;
+  display: flex; justify-content: center; align-items: center;
+}
+.divider-botanical svg {
+  width: 100%; max-width: 1400px;
+  height: 60px; opacity: 0.35;
+}
+
+/* ── SECTIONS ── */
+section { padding: 100px 60px; }
+
+.section-label {
+  font-size: 11px; font-weight: 400;
+  letter-spacing: 3.5px; text-transform: uppercase;
+  color: var(--peach-dark);
+  margin-bottom: 16px;
+}
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(36px, 4vw, 54px);
+  font-weight: 300; line-height: 1.2;
+  color: var(--text-dark);
+  margin-bottom: 24px;
+}
+.section-title em { font-style: italic; color: var(--peach-dark); }
+.section-body {
+  font-size: 16px; font-weight: 300; line-height: 1.85;
+  color: var(--text-mid);
+}
+
+/* ── ABOUT ── */
+#about { background: var(--warm-white); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: center;
+  max-width: 1200px; margin: 0 auto;
+}
+.about-image-wrap {
+  position: relative;
+}
+.about-img-placeholder {
+  width: 100%; aspect-ratio: 3/4;
+  background: linear-gradient(135deg, #fad9c8, #e8a07a);
+  border-radius: 4px 60px 4px 60px;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.5); font-size: 13px; letter-spacing: 1px;
+}
+.about-accent-box {
+  position: absolute;
+  bottom: -30px; right: -30px;
+  background: var(--gradient-main);
+  border-radius: 4px;
+  padding: 28px 32px;
+  color: white;
+  box-shadow: 0 12px 40px rgba(232,112,74,0.3);
+}
+.accent-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 52px; font-weight: 300;
+  line-height: 1;
+}
+.accent-label {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  opacity: 0.85; margin-top: 4px;
+}
+.about-text p + p { margin-top: 20px; }
+
+.credential-list {
+  list-style: none;
+  margin-top: 36px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.credential-list li {
+  display: flex; align-items: flex-start; gap: 14px;
+  font-size: 15px; font-weight: 300; color: var(--text-mid); line-height: 1.6;
+}
+.leaf-icon {
+  flex-shrink: 0; margin-top: 3px;
+  color: var(--peach);
+}
+
+/* ── SPECIALIZATIONS ── */
+#specializations {
+  background: var(--cream);
+}
+.specs-inner { max-width: 1200px; margin: 0 auto; }
+.specs-header { margin-bottom: 60px; }
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.spec-card {
+  background: white;
+  border-radius: 4px 32px 4px 32px;
+  padding: 40px 36px;
+  border: 1px solid rgba(242,160,123,0.18);
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative; overflow: hidden;
+}
+.spec-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--gradient-main);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.spec-card:hover { transform: translateY(-6px); box-shadow: 0 16px 50px rgba(242,160,123,0.15); }
+.spec-card:hover::before { opacity: 1; }
+.spec-icon {
+  width: 48px; height: 48px; margin-bottom: 24px;
+  color: var(--peach);
+}
+.spec-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 400;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+}
+.spec-desc {
+  font-size: 14px; font-weight: 300; line-height: 1.75;
+  color: var(--text-soft);
+}
+
+/* ── APPROACH ── */
+#approach { background: var(--warm-white); }
+.approach-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px;
+}
+.principle-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 32px;
+  margin-top: 16px;
+}
+.principle-item {
+  display: flex; gap: 20px; align-items: flex-start;
+}
+.principle-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 42px; font-weight: 300;
+  color: var(--peach-light);
+  line-height: 1; flex-shrink: 0;
+  width: 44px;
+}
+.principle-body {}
+.principle-title {
+  font-size: 16px; font-weight: 500;
+  color: var(--text-dark); margin-bottom: 8px;
+}
+.principle-text {
+  font-size: 14px; font-weight: 300; line-height: 1.75;
+  color: var(--text-soft);
+}
+.approach-quote {
+  background: var(--cream);
+  border-radius: 4px 60px 60px 4px;
+  padding: 56px 52px;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 100px; line-height: 0.6;
+  color: var(--peach-light);
+  margin-bottom: 24px;
+}
+.quote-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-style: italic;
+  font-weight: 300; line-height: 1.55;
+  color: var(--text-dark);
+}
+.quote-attr {
+  margin-top: 28px;
+  font-size: 12px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--peach-dark);
+}
+
+/* ── FIRST MEETING ── */
+#first-meeting {
+  background: var(--cream);
+}
+.fm-inner { max-width: 1100px; margin: 0 auto; }
+.fm-cards {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  margin-top: 56px;
+}
+.fm-card {
+  background: white;
+  border-radius: 4px 40px 4px 40px;
+  padding: 50px 44px;
+  border: 1px solid rgba(242,160,123,0.15);
+  position: relative;
+  transition: box-shadow 0.3s;
+}
+.fm-card:hover { box-shadow: 0 12px 48px rgba(242,160,123,0.12); }
+.fm-card.highlight {
+  border-color: var(--peach);
+  background: linear-gradient(135deg, #fff 0%, #fff9f5 100%);
+}
+.fm-badge {
+  position: absolute; top: -14px; left: 44px;
+  background: var(--gradient-main);
+  color: white;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  padding: 6px 18px; border-radius: 20px;
+}
+.fm-duration {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 56px; font-weight: 300;
+  color: var(--peach-dark); line-height: 1;
+  margin-bottom: 6px;
+}
+.fm-duration-label {
+  font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: var(--text-soft); margin-bottom: 24px;
+}
+.fm-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 26px; font-weight: 400;
+  color: var(--text-dark); margin-bottom: 14px;
+}
+.fm-desc {
+  font-size: 14px; font-weight: 300; line-height: 1.8;
+  color: var(--text-mid);
+}
+.fm-price {
+  margin-top: 28px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 400; color: var(--text-dark);
+}
+.fm-price span { font-size: 15px; font-weight: 300; color: var(--text-soft); }
+
+/* ── SERVICES ── */
+#services { background: var(--warm-white); }
+.services-inner { max-width: 1200px; margin: 0 auto; }
+.services-tabs {
+  display: flex; gap: 8px; margin-bottom: 50px; flex-wrap: wrap;
+}
+.tab-btn {
+  padding: 10px 28px;
+  border-radius: 30px;
+  border: 1px solid rgba(242,160,123,0.3);
+  background: white;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px; font-weight: 400;
+  color: var(--text-mid);
+  cursor: pointer;
+  transition: all 0.25s;
+  letter-spacing: 0.5px;
+}
+.tab-btn.active, .tab-btn:hover {
+  background: var(--gradient-main);
+  color: white; border-color: transparent;
+}
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;
+}
+.service-card {
+  background: var(--cream);
+  border-radius: 4px 28px 4px 28px;
+  padding: 38px 32px;
+  transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-4px); }
+.service-type {
+  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--peach-dark); margin-bottom: 14px;
+}
+.service-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px; font-weight: 400;
+  color: var(--text-dark); margin-bottom: 12px;
+}
+.service-desc {
+  font-size: 14px; font-weight: 300; line-height: 1.75;
+  color: var(--text-soft); margin-bottom: 24px;
+}
+.service-includes {
+  list-style: none; display: flex; flex-direction: column; gap: 8px;
+  margin-bottom: 24px;
+}
+.service-includes li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 13px; font-weight: 300; color: var(--text-mid);
+}
+.service-price-row {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  padding-top: 20px;
+  border-top: 1px solid rgba(242,160,123,0.2);
+}
+.service-sessions {
+  font-size: 12px; letter-spacing: 1px;
+  color: var(--text-soft);
+}
+.service-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px; font-weight: 400; color: var(--text-dark);
+}
+
+.package-banner {
+  margin-top: 60px;
+  background: var(--gradient-main);
+  border-radius: 4px 40px 4px 40px;
+  padding: 50px 56px;
+  display: grid; grid-template-columns: 1fr auto;
+  gap: 40px; align-items: center;
+  color: white;
+}
+.package-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px; font-weight: 300; margin-bottom: 12px;
+}
+.package-desc {
+  font-size: 15px; font-weight: 300; line-height: 1.7;
+  opacity: 0.9; max-width: 560px;
+}
+.package-price-block { text-align: right; flex-shrink: 0; }
+.package-from { font-size: 12px; letter-spacing: 2px; opacity: 0.8; text-transform: uppercase; }
+.package-amount {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px; font-weight: 300; line-height: 1;
+}
+.package-note { font-size: 12px; opacity: 0.75; margin-top: 4px; }
+.btn-light {
+  margin-top: 24px;
+  display: inline-block;
+  padding: 14px 36px;
+  background: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.4);
+  border-radius: 40px;
+  color: white;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px; letter-spacing: 1.5px; text-transform: uppercase;
+  text-decoration: none; cursor: pointer;
+  backdrop-filter: blur(10px);
+  transition: background 0.3s;
+}
+.btn-light:hover { background: rgba(255,255,255,0.3); }
+
+/* ── FAQ ── */
+#faq { background: var(--cream); }
+.faq-inner { max-width: 860px; margin: 0 auto; }
+.faq-list { margin-top: 52px; display: flex; flex-direction: column; gap: 2px; }
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(242,160,123,0.1);
+}
+.faq-q {
+  width: 100%; padding: 26px 32px;
+  background: none; border: none; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 16px; font-weight: 400;
+  color: var(--text-dark);
+  text-align: left; gap: 20px;
+}
+.faq-q:hover { color: var(--peach-dark); }
+.faq-icon {
+  flex-shrink: 0; width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1px solid rgba(242,160,123,0.3);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--peach-dark);
+  transition: transform 0.3s, background 0.3s;
+  font-size: 18px; line-height: 1;
+}
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+  background: var(--peach-light);
+}
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s;
+  padding: 0 32px;
+  font-size: 15px; font-weight: 300; line-height: 1.8;
+  color: var(--text-mid);
+}
+.faq-item.open .faq-a {
+  max-height: 400px;
+  padding: 0 32px 28px;
+}
+
+/* ── CONTACT ── */
+#contact { background: var(--warm-white); }
+.contact-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 80px; align-items: start;
+}
+.contact-info {}
+.contact-info p {
+  font-size: 16px; font-weight: 300; line-height: 1.8;
+  color: var(--text-mid); margin-bottom: 40px;
+}
+.contact-links {
+  list-style: none; display: flex; flex-direction: column; gap: 16px;
+}
+.contact-links li {
+  display: flex; align-items: center; gap: 16px;
+  font-size: 15px; font-weight: 300; color: var(--text-mid);
+}
+.contact-links a { color: var(--peach-dark); text-decoration: none; }
+.contact-links a:hover { text-decoration: underline; }
+.contact-icon {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--peach-pale);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--peach-dark); flex-shrink: 0;
+}
+
+/* FORM */
+.contact-form {
+  background: var(--cream);
+  border-radius: 4px 48px 4px 48px;
+  padding: 50px 44px;
+}
+.form-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px; font-weight: 400;
+  color: var(--text-dark); margin-bottom: 32px;
+}
+.form-group { margin-bottom: 22px; }
+.form-group label {
+  display: block;
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--text-soft); margin-bottom: 8px;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%; padding: 14px 18px;
+  background: white;
+  border: 1px solid rgba(242,160,123,0.25);
+  border-radius: 8px;
+  font-family: 'Jost', sans-serif;
+  font-size: 15px; font-weight: 300;
+  color: var(--text-dark);
+  transition: border-color 0.3s;
+  outline: none;
+  appearance: none;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--peach);
+}
+.form-group textarea { resize: vertical; min-height: 110px; }
+.form-submit {
+  width: 100%; padding: 16px;
+  background: var(--gradient-main);
+  color: white; border: none; border-radius: 40px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px; font-weight: 400;
+  letter-spacing: 1.5px; text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 8px 28px rgba(232,112,74,0.3);
+  transition: opacity 0.3s, transform 0.2s;
+  margin-top: 8px;
+}
+.form-submit:hover { opacity: 0.9; transform: translateY(-1px); }
+.form-privacy {
+  margin-top: 14px;
+  font-size: 12px; color: var(--text-soft); text-align: center; line-height: 1.5;
+}
+
+/* ── NOT WORKING WITH ── */
+.not-working-section {
+  margin-top: 60px;
+  padding: 36px 44px;
+  background: var(--peach-pale);
+  border-radius: 4px 32px 4px 32px;
+  border-left: 3px solid var(--peach);
+}
+.nw-title {
+  font-size: 14px; font-weight: 500; color: var(--text-dark);
+  margin-bottom: 14px;
+}
+.nw-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.nw-list li {
+  font-size: 14px; font-weight: 300; color: var(--text-soft);
+  display: flex; align-items: center; gap: 10px;
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--text-dark);
+  color: rgba(255,255,255,0.6);
+  padding: 60px 60px 40px;
+}
+.footer-inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 60px; padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 38px; font-weight: 300;
+  color: var(--peach-light); letter-spacing: 4px;
+  margin-bottom: 16px; display: block;
+}
+.footer-desc {
+  font-size: 14px; font-weight: 300; line-height: 1.7;
+  max-width: 300px;
+}
+.footer-col-title {
+  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(255,255,255,0.4); margin-bottom: 20px;
+}
+.footer-links {
+  list-style: none; display: flex; flex-direction: column; gap: 12px;
+}
+.footer-links a {
+  font-size: 14px; font-weight: 300;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none; transition: color 0.3s;
+}
+.footer-links a:hover { color: var(--peach-light); }
+.footer-bottom {
+  max-width: 1200px; margin: 0 auto;
+  padding-top: 28px;
+  display: flex; justify-content: space-between; align-items: center;
+  font-size: 12px; color: rgba(255,255,255,0.3);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes expandLine {
+  to { transform: scaleX(1); }
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.reveal {
+  opacity: 0; transform: translateY(32px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1; transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  nav { padding: 16px 32px; }
+  .nav-links { display: none; }
+  section { padding: 80px 32px; }
+  .about-grid, .approach-inner, .contact-inner, .fm-cards { grid-template-columns: 1fr; gap: 40px; }
+  .specs-grid, .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .about-accent-box { right: 0; bottom: -20px; }
+  .package-banner { grid-template-columns: 1fr; gap: 28px; }
+  .package-price-block { text-align: left; }
+  .hero-photo, .hero-photo-overlay { display: none; }
+  .hero-bg { background: linear-gradient(160deg, #f7ede2, #fad9c8 50%, #f2c4a8); }
+  .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 640px) {
+  section { padding: 60px 24px; }
+  nav { padding: 14px 24px; }
+  .hero-content { padding: 0 24px; }
+  .hero-scroll { left: 24px; }
+  .specs-grid, .services-grid, .fm-cards { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; }
+  .btn-primary, .btn-glass { text-align: center; justify-content: center; }
+  footer { padding: 40px 24px 28px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .contact-form { padding: 36px 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">NP</a>
+  <ul class="nav-links">
+    <li><a href="#about">Обо мне</a></li>
+    <li><a href="#specializations">Специализации</a></li>
+    <li><a href="#services">Услуги</a></li>
+    <li><a href="#first-meeting">Первая встреча</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#contact">Контакты</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Записаться</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <!-- Replace the div below with an <img> tag pointing to the psychologist's photo -->
+  <img class="hero-photo" src="hero.jpg" alt="Психолог Наталия Пуринь">
+  <div class="hero-photo-overlay"></div>
+
+  <div class="hero-content">
+    <div class="hero-eyebrow">Психолог · Онлайн · С 2005 года</div>
+    <h1 class="hero-title">
+      Пространство,<br>где можно быть<br><em>собой</em>
+    </h1>
+    <p class="hero-sub">
+      Я работаю с теми, кто ищет глубину, а не быстрые советы. 
+      Вместе мы создаём безопасное пространство для настоящих изменений - 
+      бережно, в вашем темпе.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+        Записаться на консультацию
+      </a>
+      <a href="#first-meeting" class="btn-glass">Первая встреча</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Листать вниз</span>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-botanical">
+  <svg viewBox="0 0 1400 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M100 30 Q200 5 300 30 Q400 55 500 30 Q600 5 700 30 Q800 55 900 30 Q1000 5 1100 30 Q1200 55 1300 30" stroke="#F2A07B" stroke-width="1.2" fill="none"/>
+    <circle cx="200" cy="12" r="3" fill="#F2A07B" opacity="0.5"/>
+    <circle cx="400" cy="50" r="2.5" fill="#F2A07B" opacity="0.4"/>
+    <circle cx="700" cy="12" r="3.5" fill="#F2A07B" opacity="0.4"/>
+    <circle cx="900" cy="50" r="2" fill="#F2A07B" opacity="0.5"/>
+    <circle cx="1100" cy="12" r="3" fill="#F2A07B" opacity="0.4"/>
+    <!-- Leaves -->
+    <ellipse cx="200" cy="12" rx="10" ry="5" fill="#F2A07B" opacity="0.2" transform="rotate(-30 200 12)"/>
+    <ellipse cx="700" cy="12" rx="10" ry="5" fill="#F2A07B" opacity="0.2" transform="rotate(20 700 12)"/>
+    <ellipse cx="1100" cy="12" rx="9" ry="4" fill="#F2A07B" opacity="0.2" transform="rotate(-25 1100 12)"/>
+    <ellipse cx="400" cy="50" rx="9" ry="4.5" fill="#F2A07B" opacity="0.2" transform="rotate(15 400 50)"/>
+    <ellipse cx="900" cy="50" rx="8" ry="4" fill="#F2A07B" opacity="0.2" transform="rotate(-20 900 50)"/>
+  </svg>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-image-wrap reveal">
+      <!-- Replace with actual photo -->
+      <img src="about_me.jpg" alt="Наталия Пуринь" style="width:100%; aspect-ratio:3/4; object-fit:cover; object-position:center top; border-radius: 4px 60px 4px 60px;">
+      <div class="about-accent-box">
+        <div class="accent-num">19+</div>
+        <div class="accent-label">лет практики</div>
+      </div>
+    </div>
+
+    <div class="about-text reveal reveal-delay-2">
+      <div class="section-label">Обо мне</div>
+      <h2 class="section-title">Психолог с широким<br>взглядом на <em>человека</em></h2>
+      <div class="section-body">
+        <p>Я начала свой путь в психологии в 2005 году, и с тех пор моя практика непрерывно растёт и углубляется. В 2017 году я добавила групповые форматы работы: тренинги, вебинары и онлайн-курсы, которые дали мне уникальный опыт работы с самыми разными запросами и людьми.</p>
+        <p>Каждый год я повышаю квалификацию, не потому что так надо, а потому что искренне верю: хороший психолог всегда остаётся в позиции ученика. Моё образование объединяет несколько глубоких направлений, которые я не просто знаю теоретически - я живу ими в работе.</p>
+        <p>Формат работы - только онлайн. Это удобно, безопасно и даёт свободу встречаться там, где вам комфортно.</p>
+      </div>
+
+      <ul class="credential-list">
+        <li>
+          <svg class="leaf-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Высшее психологическое образование
+        </li>
+        <li>
+          <svg class="leaf-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Ежегодное повышение квалификации
+        </li>
+        <li>
+          <svg class="leaf-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Индивидуальная работа с 2005, групповые форматы с 2017
+        </li>
+        <li>
+          <svg class="leaf-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Тренинги, вебинары, онлайн и офлайн курсы
+        </li>
+        <li>
+          <svg class="leaf-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Работаю индивидуально и с парами
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-botanical">
+  <svg viewBox="0 0 1400 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M50 40 Q150 15 250 40 Q350 60 450 35 Q550 10 650 35 Q750 60 850 35 Q950 10 1050 35 Q1150 60 1250 35 Q1320 20 1370 38" stroke="#F2A07B" stroke-width="1.2"/>
+    <circle cx="350" cy="60" r="2.5" fill="#F2A07B" opacity="0.4"/>
+    <circle cx="650" cy="16" r="3" fill="#F2A07B" opacity="0.35"/>
+    <circle cx="1050" cy="16" r="2.5" fill="#F2A07B" opacity="0.4"/>
+    <ellipse cx="250" cy="40" rx="9" ry="4" fill="#F2A07B" opacity="0.15" transform="rotate(10 250 40)"/>
+    <ellipse cx="850" cy="40" rx="10" ry="4.5" fill="#F2A07B" opacity="0.15" transform="rotate(-10 850 40)"/>
+  </svg>
+</div>
+
+<!-- SPECIALIZATIONS -->
+<section id="specializations">
+  <div class="specs-inner">
+    <div class="specs-header reveal">
+      <div class="section-label">Направления работы</div>
+      <h2 class="section-title">Области, в которых<br>я работаю <em>глубоко</em></h2>
+    </div>
+    <div class="specs-grid">
+
+      <div class="spec-card reveal reveal-delay-1">
+        <svg class="spec-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="24" r="16"/>
+          <path d="M24 8 Q30 16 30 24 Q30 32 24 40 Q18 32 18 24 Q18 16 24 8Z"/>
+          <path d="M8 24 Q16 18 24 18 Q32 18 40 24 Q32 30 24 30 Q16 30 8 24Z"/>
+        </svg>
+        <div class="spec-title">Телесно-ориентированная терапия</div>
+        <div class="spec-desc">Тело - это не просто оболочка. В нём хранится весь наш опыт, все непрожитые чувства и незавершённые истории. Работая с телом, мы находим то, до чего словами не добраться.</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-2">
+        <svg class="spec-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 4 L28 16 L40 16 L30 24 L34 36 L24 28 L14 36 L18 24 L8 16 L20 16 Z"/>
+        </svg>
+        <div class="spec-title">Гештальт-подход</div>
+        <div class="spec-desc">Гештальт - это про «здесь и сейчас». Про осознанность, контакт с собой и миром, про завершение незакрытых гештальтов прошлого и возвращение к живой жизни.</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-3">
+        <svg class="spec-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="12" r="5"/>
+          <circle cx="10" cy="34" r="5"/>
+          <circle cx="38" cy="34" r="5"/>
+          <path d="M24 17 L12 30 M24 17 L36 30 M15 34 L33 34"/>
+        </svg>
+        <div class="spec-title">Системно-семейная терапия</div>
+        <div class="spec-desc">Мы все часть систем: семьи, рода, пар. Иногда то, что кажется личной проблемой, уходит корнями в динамику отношений. Здесь мы смотрим шире, чем на одного человека.</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-1">
+        <svg class="spec-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 8 C14 8 8 16 8 24 C8 32 14 40 24 40 C34 40 40 32 40 24"/>
+          <path d="M30 8 C32 12 34 16 34 20"/>
+          <path d="M38 14 L34 20 L28 16"/>
+        </svg>
+        <div class="spec-title">Сексология</div>
+        <div class="spec-desc">Тема, о которой часто молчат, но которая глубоко влияет на качество жизни и отношений. Здесь можно говорить обо всём открыто, без осуждения и стыда.</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-2">
+        <svg class="spec-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M24 40 C24 40 8 30 8 18 C8 12 14 8 20 10 C22 11 23 13 24 16 C25 13 26 11 28 10 C34 8 40 12 40 18 C40 30 24 40 24 40Z"/>
+        </svg>
+        <div class="spec-title">Горе-информированный подход</div>
+        <div class="spec-desc">Потеря - это не только уход близкого человека. Это любое горе: о несбывшемся, об отношениях, о прошлой себе. Я прошла курс доулы смерти и создаю «пространство горя» - место, где можно не держаться.</div>
+      </div>
+
+      <div class="spec-card reveal reveal-delay-3">
+        <svg class="spec-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="24" cy="20" r="8"/>
+          <path d="M24 28 L18 40 L24 36 L30 40 Z"/>
+          <path d="M10 20 Q14 12 24 12 Q34 12 38 20"/>
+        </svg>
+        <div class="spec-title">Работа с парами</div>
+        <div class="spec-desc">Отношения - это живая система, которая требует внимания и заботы. Работа с парами помогает восстановить контакт, найти общий язык и понять, чего каждый из вас по-настоящему хочет.</div>
+      </div>
+
+    </div>
+
+    <div class="not-working-section reveal">
+      <div class="nw-title">Важно знать: я не работаю с</div>
+      <ul class="nw-list">
+        <li>
+          <svg width="16" height="16" fill="none" stroke="#9A6E58" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Людьми с химической зависимостью (алкогольной, наркотической)
+        </li>
+        <li>
+          <svg width="16" height="16" fill="none" stroke="#9A6E58" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Авторами насилия
+        </li>
+        <li>
+          <svg width="16" height="16" fill="none" stroke="#9A6E58" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          Детьми и подростками до 18 лет
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-botanical">
+  <svg viewBox="0 0 1400 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M0 30 Q100 10 200 30 Q300 50 400 28 Q500 8 600 28 Q700 50 800 28 Q900 8 1000 28 Q1100 50 1200 28 Q1300 8 1400 30" stroke="#F2A07B" stroke-width="1.2"/>
+    <ellipse cx="300" cy="50" rx="11" ry="5" fill="#F2A07B" opacity="0.18" transform="rotate(8 300 50)"/>
+    <ellipse cx="700" cy="50" rx="10" ry="4.5" fill="#F2A07B" opacity="0.18" transform="rotate(-5 700 50)"/>
+    <ellipse cx="1100" cy="50" rx="10" ry="4.5" fill="#F2A07B" opacity="0.18" transform="rotate(8 1100 50)"/>
+    <circle cx="500" cy="8" r="3" fill="#F2A07B" opacity="0.35"/>
+    <circle cx="900" cy="8" r="2.5" fill="#F2A07B" opacity="0.35"/>
+  </svg>
+</div>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="approach-inner">
+    <div>
+      <div class="section-label reveal">Мой подход</div>
+      <h2 class="section-title reveal">Принципы, на которых<br>строится наша <em>работа</em></h2>
+      <ul class="principle-list">
+        <li class="principle-item reveal">
+          <div class="principle-num">01</div>
+          <div class="principle-body">
+            <div class="principle-title">Безопасность прежде всего</div>
+            <div class="principle-text">Прежде чем двигаться вглубь, мы создаём доверие. Я убеждена, что настоящая работа возможна только там, где человек чувствует себя в безопасности (без спешки, без давления).</div>
+          </div>
+        </li>
+        <li class="principle-item reveal reveal-delay-1">
+          <div class="principle-num">02</div>
+          <div class="principle-body">
+            <div class="principle-title">Уважение к вашему темпу</div>
+            <div class="principle-text">Каждый идёт своим путём. Я не тороплю и не замедляю - я иду рядом, доверяя внутренней мудрости каждого клиента. Вы сами определяете, куда и как быстро двигаться.</div>
+          </div>
+        </li>
+        <li class="principle-item reveal reveal-delay-2">
+          <div class="principle-num">03</div>
+          <div class="principle-body">
+            <div class="principle-title">Многогранный взгляд</div>
+            <div class="principle-text">Я не привязана к одному методу. Гештальт, телесная терапия, системный подход - я использую то, что нужно именно вам и именно сейчас. Человек сложнее любой теории.</div>
+          </div>
+        </li>
+        <li class="principle-item reveal reveal-delay-3">
+          <div class="principle-num">04</div>
+          <div class="principle-body">
+            <div class="principle-title">Без осуждения</div>
+            <div class="principle-text">В нашем пространстве нет правильных и неправильных чувств, нет «слишком много» или «слишком мало». Есть только живой опыт, с которым можно работать.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="approach-quote reveal reveal-delay-2">
+      <div class="quote-mark">"</div>
+      <div class="quote-text">
+        Я не верю в быстрые решения. Но я верю в то, что каждый человек способен найти свой путь, если рядом есть кто-то, кто по-настоящему слышит.
+      </div>
+      <div class="quote-attr">— Наталия Пуринь</div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-botanical">
+  <svg viewBox="0 0 1400 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M0 20 Q100 45 200 22 Q300 0 400 22 Q500 45 600 22 Q700 0 800 22 Q900 45 1000 22 Q1100 0 1200 22 Q1300 45 1400 20" stroke="#F2A07B" stroke-width="1.2"/>
+    <ellipse cx="200" cy="22" rx="12" ry="5.5" fill="#F2A07B" opacity="0.15" transform="rotate(-15 200 22)"/>
+    <ellipse cx="600" cy="22" rx="11" ry="5" fill="#F2A07B" opacity="0.15" transform="rotate(12 600 22)"/>
+    <ellipse cx="1000" cy="22" rx="11" ry="5" fill="#F2A07B" opacity="0.15" transform="rotate(-12 1000 22)"/>
+  </svg>
+</div>
+
+<!-- FIRST MEETING -->
+<section id="first-meeting">
+  <div class="fm-inner">
+    <div class="reveal">
+      <div class="section-label">Первая встреча</div>
+      <h2 class="section-title">С чего мы <em>начинаем</em></h2>
+      <p class="section-body" style="max-width:600px;">Первая встреча - это знакомство. Здесь нет правильных или неправильных ответов. Вы просто рассказываете о том, что привело вас сюда, а я о том, как мы можем работать вместе. Выберите формат, который подходит вам:</p>
+    </div>
+
+    <div class="fm-cards">
+      <div class="fm-card reveal reveal-delay-1">
+        <div class="fm-duration">20</div>
+        <div class="fm-duration-label">минут</div>
+        <div class="fm-title">Знакомство</div>
+        <div class="fm-desc">Короткая встреча-знакомство, чтобы почувствовать, подходим ли мы друг другу. Вы можете задать любые вопросы о процессе работы, формате и подходе. Никаких обязательств, только живое общение.</div>
+        <div class="fm-price">Бесплатно <span>/ без обязательств</span></div>
+      </div>
+
+      <div class="fm-card highlight reveal reveal-delay-2">
+        <div class="fm-badge">Рекомендую</div>
+        <div class="fm-duration">60</div>
+        <div class="fm-duration-label">минут</div>
+        <div class="fm-title">Первая полная сессия</div>
+        <div class="fm-desc">Полноценная встреча, на которой мы углубляемся в ваш запрос, намечаем направление работы и начинаем первые шаги. После этой встречи у вас будет ясное понимание того, как будет выглядеть наша совместная работа.</div>
+        <div class="fm-price">— <span>/ уточняется при записи</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-botanical">
+  <svg viewBox="0 0 1400 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M100 35 Q250 10 400 30 Q550 50 700 25 Q850 5 1000 28 Q1100 45 1200 30 Q1280 18 1350 32" stroke="#F2A07B" stroke-width="1.2"/>
+    <circle cx="400" cy="30" r="3" fill="#F2A07B" opacity="0.4"/>
+    <circle cx="1000" cy="28" r="2.5" fill="#F2A07B" opacity="0.35"/>
+    <ellipse cx="700" cy="25" rx="13" ry="5.5" fill="#F2A07B" opacity="0.15" transform="rotate(5 700 25)"/>
+  </svg>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-inner">
+    <div class="reveal">
+      <div class="section-label">Услуги и цены</div>
+      <h2 class="section-title">Форматы нашей<br><em>совместной</em> работы</h2>
+      <p class="section-body" style="max-width: 580px; margin-bottom: 40px;">Я работаю только онлайн - это удобно, конфиденциально и позволяет нам встречаться из любой точки мира. Ниже основные форматы работы и пакетные предложения.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card reveal reveal-delay-1">
+        <div class="service-type">Индивидуально</div>
+        <div class="service-name">Разовая сессия</div>
+        <div class="service-desc">Полноценная встреча один на один. Подходит для тех, кто хочет попробовать или вернуться после паузы.</div>
+        <ul class="service-includes">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A07B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            50–60 минут
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A07B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Онлайн, удобная вам платформа
+          </li>
+        </ul>
+        <div class="service-price-row">
+          <div class="service-sessions">1 встреча</div>
+          <div class="service-price">— €</div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-2">
+        <div class="service-type">Для пар</div>
+        <div class="service-name">Парная сессия</div>
+        <div class="service-desc">Работа для двух партнёров, чтобы найти общий язык, разрешить конфликты или просто стать ближе друг к другу.</div>
+        <ul class="service-includes">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A07B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            70–80 минут
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A07B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Онлайн видеозвонок
+          </li>
+        </ul>
+        <div class="service-price-row">
+          <div class="service-sessions">1 встреча</div>
+          <div class="service-price">— €</div>
+        </div>
+      </div>
+
+      <div class="service-card reveal reveal-delay-3">
+        <div class="service-type">Групповой формат</div>
+        <div class="service-name">Тематические группы</div>
+        <div class="service-desc">Онлайн-группы, вебинары и курсы по темам: горе, отношения, тело, сексуальность. Расписание уточняйте в контактах.</div>
+        <ul class="service-includes">
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A07B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Разные форматы и длительность
+          </li>
+          <li>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#F2A07B" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Онлайн
+          </li>
+        </ul>
+        <div class="service-price-row">
+          <div class="service-sessions">По расписанию</div>
+          <div class="service-price">По запросу</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PACKAGE BANNER -->
+    <div class="package-banner reveal">
+      <div>
+        <div class="package-title">Пакет сессий для тех, кто готов к глубокой работе</div>
+        <div class="package-desc">
+          Регулярная работа - это то, где происходят настоящие изменения. Пакет из нескольких сессий даёт нам время по-настоящему разобраться в вашей ситуации, не торопясь. Плюс, это выгоднее финансово.
+        </div>
+        <a href="#contact" class="btn-light">Узнать подробнее</a>
+      </div>
+      <div class="package-price-block">
+        <div class="package-from">Пакеты от</div>
+        <div class="package-amount">4+</div>
+        <div class="package-note">сессий · индивидуальные условия</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-botanical">
+  <svg viewBox="0 0 1400 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M0 28 Q200 8 400 28 Q600 48 800 28 Q1000 8 1200 28 Q1300 38 1400 28" stroke="#F2A07B" stroke-width="1.2"/>
+    <ellipse cx="400" cy="28" rx="12" ry="5" fill="#F2A07B" opacity="0.16" transform="rotate(-8 400 28)"/>
+    <ellipse cx="800" cy="28" rx="12" ry="5" fill="#F2A07B" opacity="0.16" transform="rotate(8 800 28)"/>
+    <ellipse cx="1200" cy="28" rx="11" ry="5" fill="#F2A07B" opacity="0.16" transform="rotate(-8 1200 28)"/>
+  </svg>
+</div>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="reveal">
+      <div class="section-label">Частые вопросы</div>
+      <h2 class="section-title">Всё, что важно<br>знать <em>заранее</em></h2>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Как подготовиться к первой сессии?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Специальной подготовки не требуется - приходите такими, какие вы есть. Лучше всего заранее подумать о том, что привело вас к решению обратиться за помощью: что вас беспокоит, чего вы хотите изменить или понять. Это не задание - просто небольшая точка опоры. Найдите тихое место, где вас не будут прерывать, проверьте связь и наденьте то, в чём вам удобно. Всё остальное - вместе разберёмся.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Как проходит онлайн-сессия?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Сессия проходит в формате видеозвонка через Zoom. Всё, что вам нужно: тихое место, наушники (желательно) и стабильный интернет. По ощущениям онлайн-работа ничем не уступает офлайну, многие клиенты даже предпочитают её, потому что можно оставаться в привычной и безопасной обстановке.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Как часто нужно встречаться?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Обычно мы встречаемся раз в неделю - это оптимальный ритм для того, чтобы работа была глубокой и последовательной. В некоторых ситуациях мы можем обсудить другой формат: чаще или реже. Всё определяется вашим запросом, темпом и возможностями.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Как долго длится терапия?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Это зависит от вашего запроса. Некоторые темы решаются за несколько встреч, другие требуют более длительной работы - и это нормально. Я не навязываю определённый срок. После нескольких сессий мы вместе оцениваем, как движется работа, и корректируем план при необходимости. Вы всегда можете завершить в любой момент.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Всё ли, что я говорю, останется конфиденциальным?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Да. Конфиденциальность - основа нашей работы. Всё, что вы рассказываете на сессии, остаётся между нами. Единственное исключение ситуации, когда есть прямая угроза жизни, и это предусмотрено профессиональной этикой. В остальном - полная тайна.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Правила отмены и переноса сессии
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Я прошу предупреждать об отмене или переносе сессии не менее чем за 24 часа. Это позволяет мне предложить освободившееся время другим клиентам. Сессии, отменённые позднее или без предупреждения, оплачиваются в полном объёме. Я понимаю, что жизнь бывает непредсказуемой, поэтому всегда рада обсудить исключения в индивидуальном порядке.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Что если мне станет хуже в процессе терапии?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Иногда в процессе работы на поверхность поднимается то, что раньше было спрятано, и это может ощущаться тяжелее. Это нормальная часть пути, а не признак того, что что-то идёт не так. Я всегда отслеживаю ваше состояние и при необходимости адаптирую темп работы. Если вам вдруг станет совсем трудно между сессиями, вы можете написать мне.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Работаете ли вы с клиентами из других стран?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-a">
+          Да, формат онлайн позволяет работать с людьми из любой точки мира, где есть доступ к интернету. Я работаю на русском языке. Разница в часовых поясах не проблема, мы найдём удобное время для обоих.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="divider-botanical">
+  <svg viewBox="0 0 1400 60" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <path d="M50 32 Q200 12 350 30 Q500 48 650 26 Q800 8 950 28 Q1100 48 1250 28 Q1330 18 1380 32" stroke="#F2A07B" stroke-width="1.2"/>
+    <circle cx="350" cy="30" r="3" fill="#F2A07B" opacity="0.35"/>
+    <circle cx="950" cy="28" r="2.5" fill="#F2A07B" opacity="0.35"/>
+    <ellipse cx="650" cy="26" rx="12" ry="5" fill="#F2A07B" opacity="0.15" transform="rotate(-6 650 26)"/>
+  </svg>
+</div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <div class="section-label">Контакты</div>
+      <h2 class="section-title">Готовы сделать<br>первый <em>шаг?</em></h2>
+      <p>Напишите мне, и мы вместе выберем удобное время для первой встречи. Я стараюсь отвечать в течение 24 часов. Если вы сомневаетесь, стоит ли обращаться... напишите всё равно. Иногда сомнение - это и есть первый шаг.</p>
+      <ul class="contact-links">
+        <li>
+          <div class="contact-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.7 1.2 2 2 0 012.7 0h3a2 2 0 012 1.72c.127.96.36 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.09a16 16 0 006 6l1.06-1.06a2 2 0 012.11-.45c.907.34 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+          </div>
+          <span>Telegram: <a href="#">@username</a></span>
+        </li>
+        <li>
+          <div class="contact-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <span>Email: <a href="mailto:hello@example.com">hello@example.com</a></span>
+        </li>
+        <li>
+          <div class="contact-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <span>Сессии: онлайн, по всему миру</span>
+        </li>
+        <li>
+          <div class="contact-icon">
+            <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <span>Ответ в течение 24 часов</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="contact-form reveal reveal-delay-2">
+      <div class="form-title">Написать мне</div>
+      <div class="form-group">
+        <label>Ваше имя</label>
+        <input type="text" placeholder="Как вас зовут?">
+      </div>
+      <div class="form-group">
+        <label>Контакт для связи</label>
+        <input type="text" placeholder="Email или Telegram">
+      </div>
+      <div class="form-group">
+        <label>Интересующий формат</label>
+        <select>
+          <option value="">Выберите формат...</option>
+          <option>Знакомство (20 минут, бесплатно)</option>
+          <option>Первая полная сессия (60 минут)</option>
+          <option>Индивидуальная работа</option>
+          <option>Работа с парой</option>
+          <option>Групповой формат / курс</option>
+          <option>Пакет сессий</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>С чем хотели бы поработать?</label>
+        <textarea placeholder="Расскажите немного о себе и о том, что привело вас сюда. Это необязательно, но помогает мне лучше подготовиться к нашей встрече."></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit(event)">Отправить сообщение</button>
+      <div class="form-privacy">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Вся информация строго конфиденциальна.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-logo">NP</span>
+      <p class="footer-desc">Психолог с более чем 19-летним опытом. Онлайн-работа с людьми по всему миру. Индивидуальные сессии и работа с парами.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Навигация</div>
+      <ul class="footer-links">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#specializations">Специализации</a></li>
+        <li><a href="#approach">Подход</a></li>
+        <li><a href="#first-meeting">Первая встреча</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Направления</div>
+      <ul class="footer-links">
+        <li><a href="#specializations">Гештальт</a></li>
+        <li><a href="#specializations">Телесная терапия</a></li>
+        <li><a href="#specializations">Системная терапия</a></li>
+        <li><a href="#specializations">Сексология</a></li>
+        <li><a href="#specializations">Пространство горя</a></li>
+        <li><a href="#specializations">Работа с парами</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Наталия Пуринь. Все права защищены.</span>
+    <span>Онлайн-консультации по всему миру</span>
+  </div>
+</footer>
+
+<script>
+// ── SCROLL REVEAL ──
+const revealEls = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      observer.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12 });
+revealEls.forEach(el => observer.observe(el));
+
+// ── FAQ TOGGLE ──
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ── FORM SUBMIT ──
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target;
+  btn.textContent = 'Отправлено ✓';
+  btn.style.background = 'linear-gradient(135deg, #8FAF8A, #6a9466)';
+  setTimeout(() => {
+    btn.textContent = 'Отправить сообщение';
+    btn.style.background = '';
+  }, 3000);
+}
+
+// ── NAV SHADOW ON SCROLL ──
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 60) {
+    nav.style.boxShadow = '0 2px 30px rgba(44,26,14,0.08)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
+});
+</script>
+</body>
+</html>
