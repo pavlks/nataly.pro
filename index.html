@@ -769,6 +769,7 @@ footer {
   .hero-photo, .hero-photo-overlay { display: none; }
   .hero-bg { background: linear-gradient(160deg, #f7ede2, #fad9c8 50%, #f2c4a8); }
   .footer-inner { grid-template-columns: 1fr; gap: 36px; }
+  #topics [style*="repeat(4, 1fr)"] { grid-template-columns: repeat(2, 1fr) !important; }
 }
 @media (max-width: 640px) {
   section { padding: 60px 24px; }
@@ -781,6 +782,7 @@ footer {
   footer { padding: 40px 24px 28px; }
   .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
   .contact-form { padding: 36px 28px; }
+  #topics [style*="repeat(4, 1fr)"] { grid-template-columns: 1fr !important; }
 }
 </style>
 </head>
@@ -895,6 +897,97 @@ footer {
     </div>
   </div>
 </section>
+
+<!-- С ЧЕМ КО МНЕ ПРИХОДЯТ -->
+<!--
+<section id="topics" style="background: linear-gradient(135deg, #E8704A 0%, #F2A07B 60%, #E07A4F 100%); padding: 100px 60px;">
+  <div style="max-width: 1200px; margin: 0 auto;">
+
+    <div style="margin-bottom: 60px;">
+      <div style="font-size: 11px; font-weight: 800; letter-spacing: 3.5px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 16px;">Темы работы</div>
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 4vw, 54px); font-weight: 400; line-height: 1.2; color: white; margin: 0;">
+        С чем ко мне <em style="font-style: italic; color: rgba(255,255,255,0.75);">приходят</em>
+      </h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🌿</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Тревога и стресс</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Постоянное напряжение, тревожные мысли по ночам, ощущение что всё вот-вот рухнет.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">💔</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Потеря и горе</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Уход близкого, развод, потеря работы или прежней жизни — когда нужно место, где можно не держаться.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🤝</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Отношения и пары</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Конфликты, отдаление, измены, ощущение что говорите на разных языках — вдвоём или по отдельности.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🌸</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Сексуальность</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Вопросы желания, близости, идентичности или стыда вокруг темы секса — то, о чём обычно молчат.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🪨</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Тело и зажимы</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Хроническое напряжение, психосоматика, ощущение что тело живёт отдельно от вас — работаем через телесный контакт.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🪞</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Самооценка и границы</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Трудно сказать «нет», постоянное чувство вины, ощущение что вы недостаточно хороши.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🌀</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Семейные сценарии</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Повторяющиеся паттерны из детства, сложные отношения с родителями, роль в семейной системе.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🕯️</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Смерть и умирание</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Страх смерти, сопровождение умирающего близкого, принятие конечности — пространство, где об этом можно говорить.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🔥</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Выгорание</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Пустота, апатия, когда ничего не хочется и непонятно зачем — возвращаем контакт с собой и смыслами.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">🧭</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Кризис и перемены</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Переезд, смена работы, развод, возрастной кризис — когда земля уходит из-под ног и нужна точка опоры.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">💬</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Одиночество</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">Ощущение изоляции даже среди людей, трудности с близостью, страх быть непонятым или отвергнутым.</div>
+      </div>
+
+      <div style="background: rgba(255,255,255,0.22); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.3); border-radius: 4px 28px 4px 28px; padding: 32px 28px; transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='none'">
+        <div style="font-size: 28px; margin-bottom: 16px;">✨</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 800; color: white; margin-bottom: 10px;">Поиск себя</div>
+        <div style="font-size: 16px; font-weight: 400; line-height: 1.7; color: rgba(255,255,255,0.8);">«Кто я? Чего я хочу?» — когда жизнь внешне в порядке, но внутри пусто или непонятно, куда двигаться дальше.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+-->
 
 <!-- DIVIDER -->
 <div class="divider-botanical">
