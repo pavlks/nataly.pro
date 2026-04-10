@@ -1,1 +1,1 @@
-# nataly.pro
+# natali.pro
